@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+</head>
+<body>
+<form action="#" th:action="@{/getyourfuture}"
+      th:object="${personInfo}" method="POST" class="index">
+    <label id="name">Name: </label>
+    <input type="text" th:field="*{name}" id="nameInput"> <br>
+    <label id="age">Age: </label>
+    <input type="text" th:field="*{age}" id="ageInput"> <br>
+    <label id="gender">Gender: </label>
+    <select id="genderChoice" >
+        <option value="male">Male
+        </option>
+        <option value="female">Female
+        </option>
+    </select>
+    <button type="submit"  class="btn btn-success" id="personInfoButton">Tell my future</button>
+
+
+</form>
+</body>
+</html>
