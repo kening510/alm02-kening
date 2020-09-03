@@ -4,23 +4,17 @@ pipeline {
         choice(name: 'DEPLOY_ENV', choices:['int','stage','prod'],description:'Target environment')
     }
     stages {
-        stage('Fetch code') {
+        stage('Build application') {
             steps {
-                sh 'mvn --version'
+                sh 'mvn clean install'
+            }
+            post{
+                always{
+                    junit 'target/surefire-reports/*.xml'
+                }
             }
         }
 
-        stage('build code1234') {
-            steps {
-                sh 'ls'
-            }
-        }
-        stage('run test and publish test results') {
-            steps {
-                sh 'ls'
-            }
-        }
-        
          stage('deploy war files') {
             steps {
                 sh 'ls'

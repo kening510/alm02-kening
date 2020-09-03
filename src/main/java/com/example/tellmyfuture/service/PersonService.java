@@ -16,16 +16,15 @@ public class PersonService {
     private PersonRepository personRepository;
 
     @Autowired
-    public PersonService(PersonRepository personRepository){
-        this.personRepository = personRepository;
+    public PersonService(){
     }
 
     public List<PersonEntity> getPersonList(){
-        return personRepository.findAll();
+        return null;
     }
 
     public Optional<PersonEntity> getAPerson(long id){
-        return personRepository.findById(id);
+        return null;
     }
 
     public int getRandomNumber(){

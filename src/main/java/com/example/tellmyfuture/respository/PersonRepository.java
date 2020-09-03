@@ -1,10 +1,11 @@
 package com.example.tellmyfuture.respository;
 
-import com.example.tellmyfuture.domain.PersonEntity;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+//import com.example.tellmyfuture.domain.PersonEntity;
+//import org.springframework.data.jpa.repository.JpaRepository;
+//import org.springframework.stereotype.Repository;
 
 
-@Repository
-public interface PersonRepository extends JpaRepository<PersonEntity, Long> {
+//@Repository
+public interface PersonRepository //extends JpaRepository<PersonEntity, Long>
+{
 }
