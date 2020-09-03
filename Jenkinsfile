@@ -9,6 +9,7 @@ pipeline {
                 sh 'mvn --version'
             }
         }
+
         stage('build code1234') {
             steps {
                 sh 'ls'
@@ -28,3 +29,4 @@ pipeline {
         
     }
 }
+
