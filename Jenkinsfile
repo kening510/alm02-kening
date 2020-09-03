@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    parameters{
+        choice(name: 'DEPLOY_ENV', choices:['int','stage','prod'],description:'Target environment')
+    }
     stages {
         stage('Fetch code') {
             steps {
