@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class PersonController {
     private PersonService personService;
 
-    @Autowired
-    public PersonController() {
-    }
+//    @Autowired
+//    public PersonController() {
+//    }
 
     @GetMapping("/index")
     public String showHomepage(Model theModel) {
