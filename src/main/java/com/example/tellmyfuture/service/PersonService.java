@@ -10,13 +10,13 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Random;
 
-@Service
+//@Service
 public class PersonService {
 
     private PersonRepository personRepository;
 
-    @Autowired
-    public PersonService(){
-    }
+//    @Autowired
+//    public PersonService(){
+//    }
 
 }
