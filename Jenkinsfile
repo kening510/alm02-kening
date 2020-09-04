@@ -27,7 +27,7 @@ pipeline {
             }
         }
 
-         stage('deploy war files') {
+         stage('deploy application') {
             steps {
                 sh 'asadmin --port 4848 deploy --force --name tellmyfuture-${DEPLOY_ENV} --contextroot tellmyfuture-${DEPLOY_ENV} target/tellmyfuture-0.0.1-SNAPSHOT.jar'
             }
