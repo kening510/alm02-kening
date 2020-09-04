@@ -5,6 +5,11 @@ pipeline {
     }
     stages {
         stage('Build application') {
+            agent {
+                docker {
+                    image 'maven:3.6.3-slim'
+                }
+            }
             steps {
                 sh 'mvn clean install'
             }
