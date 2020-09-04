@@ -17,14 +17,14 @@ pipeline {
                 }
                 
                 success {
-                    archive 'target/tellmyfuture-0.0.1-SNAPSHOT.jar'
+                    archive 'target/tellmyfuture-0.0.1-SNAPSHOT.war'
                 }
             }
         }
 
          stage('deploy war files') {
             steps {
-                sh 'asadmin --port 4848 deploy --force --name tellmyfuture-${DEPLOY_ENV} --contextroot tellmyfuture-${DEPLOY_ENV} target/tellmyfuture-0.0.1-SNAPSHOT.jar'
+                sh 'asadmin --port 4848 deploy --force --name tellmyfuture-${DEPLOY_ENV} --contextroot tellmyfuture-${DEPLOY_ENV} target/tellmyfuture-0.0.1-SNAPSHOT.war'
             }
         }
         
