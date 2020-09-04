@@ -19,16 +19,4 @@ public class PersonService {
     public PersonService(){
     }
 
-    public List<PersonEntity> getPersonList(){
-        return null;
-    }
-
-    public Optional<PersonEntity> getAPerson(long id){
-        return null;
-    }
-
-    public int getRandomNumber(){
-        Random random = new Random();
-        return random.nextInt();
-    }
 }
